@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     labron: {
-        flex: 1,
-        // marginTop: 30
+        //flex: 1,
+        marginTop: 30,
         alignItems: 'center',
         justifyContent: 'center',
         gap: '20%',
@@ -33,37 +33,49 @@ const styles = StyleSheet.create({
         //backgroundSize: 'cover',
         //width: '100%',
         //height: '100%'
-        //top: 0,
+        //top: '50%',
         //left: 0,
     },
-    // labronMask: {
-    //     flex: 1,
-    //     // marginTop: 30
-    //     alignItems: 'center',
-    //     justifyContent: 'center',
-    //     gap: '20%',
-    //     position: 'absolute'
-    // },
-    lakersLogo: {
-        flex: 1,
+    labronMask: {
+        //flex: 1,
         // marginTop: 30
         alignItems: 'center',
         justifyContent: 'center',
-        gap: '20%',
+        //gap: '20%',
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        zIndex: 1
     },
-    // textLabron: {
-    //     flex: 1,
-    //     // marginTop: 30
-    //     alignItems: 'center',
-    //     justifyContent: 'center',
-    //     gap: '20%',
-    //     color: 'blue',
-    //     position: 'absolute',
-    //     width: '300',
-    //     height: '300',
-    //     fontSize: '180%',
-    //     fontWeight: 'bold'
-    // },
+    lakersLogo: {
+        //flex: 1,
+        // marginTop: 30
+        alignItems: 'center',
+        justifyContent: 'center',
+        //gap: '20%',
+        position: 'absolute',
+        right: '25%',
+        //bottom: '10%',
+        width: '10px',
+        height: '10px',
+        zIndex: 3,
+        //marginBottom: '-200px'
+        bottom: '-50px',
+    },
+    textLabron: {
+        //flex: 1,
+        // marginTop: 30
+        alignItems: 'center',
+        justifyContent: 'center',
+        //gap: '20%',
+        color: 'blue',
+        position: 'absolute',
+        width: '300',
+        height: '300',
+        fontSize: '180%',
+        fontWeight: 'bold',
+        zIndex: 2
+    },
     avatar: {
         position: 'absolute',
         width: '50px',
@@ -72,9 +84,9 @@ const styles = StyleSheet.create({
         borderRadius: '50%',
         borderWidth: '1px',
         borderColor: 'blue',
-        top: 0,
+        top: '3%',
         right: '1%',
-        bottom: '97%'
+        zIndex: 4
     }
     // logo: {
     //     position: 'relative',

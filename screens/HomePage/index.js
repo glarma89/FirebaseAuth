@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons'
 import styles from './style';
 import CameraScreen from '../CameraScreen/index.js'
+import EntryPage from '../EntryPage';
 
 //const Tab = createMaterialBottomTabNavigator()
 const Tab = createBottomTabNavigator()
@@ -35,14 +36,15 @@ const HomePage = ({ navigation }) => {
                     {`  Lakers wants YOU\nto be the next team\n\t    player`}
                 </Text>
                 <View style={styles.avatar}/>
+                <View style={styles.lakersLogo}>
+                    <Image 
+                        style={{ width: 250, height: 150 }}
+                        source={require('../../pictures/Picture3.png')} // lakers logo
+                    />
+                </View>
             </View>
             
-            <View style={styles.lakersLogo}>
-                <Image 
-                    style={{ width: 100, height: 100 }}
-                    source={require('../../pictures/Picture3.png')} // lakers logo
-                />
-            </View>
+            
             <Tab.Navigator
                 barStyle={{ backgroundColor: 'white' }} //'black' bar
                 initialRouteName="/"
@@ -53,7 +55,8 @@ const HomePage = ({ navigation }) => {
                     options={{
                         tabBarIcon: ({ color }) => (
                             <Feather name='home' size={24} color={color}/>
-                        )
+                        ),
+                        headerShown: false
                     }}
                 />
                 <Tab.Screen
@@ -62,16 +65,18 @@ const HomePage = ({ navigation }) => {
                     options={{
                         tabBarIcon: ({ color }) => (
                             <Feather name='user' size={24} color={color}/>
-                        )
+                        ),
+                        headerShown: false
                     }}
                 />
                 <Tab.Screen
                     name='Add' // Add
-                    component={CameraScreen}
+                    component={EmptyScreen} // CameraScreen
                     options={{
                         tabBarIcon: ({ color }) => (
                             <Feather name='plus-circle' size={24} color={color}/>
-                        )
+                        ),
+                        headerShown: false
                     }}
                 />
                 <Tab.Screen
@@ -80,7 +85,8 @@ const HomePage = ({ navigation }) => {
                     options={{
                         tabBarIcon: ({ color }) => (
                             <Feather name='bell' size={24} color={color}/>
-                        )
+                        ),
+                        headerShown: false
                     }}
                 />
                 <Tab.Screen
@@ -89,7 +95,8 @@ const HomePage = ({ navigation }) => {
                     options={{
                         tabBarIcon: ({ color }) => (
                             <Feather name='search' size={24} color={color}/>
-                        )
+                        ),
+                        headerShown: false
                     }}
                 />
             </Tab.Navigator>
