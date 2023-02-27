@@ -17,11 +17,11 @@ const EmptyScreen = () => {
 const HomePage = ({ navigation }) => {
     return ( 
         <View style={styles.container}>
-            <Text style={styles.text}>
-                #Labron Challenge
-            </Text>
-            
             <View style={styles.labron}>
+                <View style={styles.redPoint}/>
+                <Text style={styles.text}>
+                    #Labron Challenge
+                </Text>
                 <Image 
                     style={{ width: 300, height: 300 }}
                     source={require('../../pictures/Picture5.png')} // labron
@@ -38,7 +38,7 @@ const HomePage = ({ navigation }) => {
                 <View style={styles.avatar}/>
                 <View style={styles.lakersLogo}>
                     <Image 
-                        style={{ width: 250, height: 150 }}
+                        style={{ width: 130, height: 90 }}
                         source={require('../../pictures/Picture3.png')} // lakers logo
                     />
                 </View>
