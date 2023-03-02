@@ -71,12 +71,12 @@ const HomePage = ({ navigation }) => {
                 />
                 <Tab.Screen
                     name='Add' // Add
-                    component={EmptyScreen} // CameraScreen
+                    component={CameraScreen} // CameraScreen
                     options={{
                         tabBarIcon: ({ color }) => (
                             <Feather name='plus-circle' size={24} color={color}/>
                         ),
-                        headerShown: false
+                        headerShown: true
                     }}
                 />
                 <Tab.Screen

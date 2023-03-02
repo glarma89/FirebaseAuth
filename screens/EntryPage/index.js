@@ -76,6 +76,10 @@ const EntryPage = ({ navigation }) => {
                     title='Go to Stars'
                     onPress={() => navigation.navigate('Stars')}
                 >Button</Button>
+                <Button 
+                    title='Go to CheckingCameraScreen'
+                    onPress={() => navigation.navigate('CheckingCameraScreen')}
+                >Button</Button>
             </View>
         </View>
      );

@@ -23,6 +23,9 @@ import SearchScreen from './screens/SearchScreen';
 import SettingsForRecord from './screens/SettingsForRecord';
 import Share from './screens/Share';
 import Stars from './screens/Stars';
+import CheckingCameraScreen from './screens/CheckingCameraScreen/indexempty';
+//import CheckingCameraScreen from './screens/CheckingCameraScreen/index2';
+
 //import HomeScreen from './screens/HomeScreen';
 
 const Stack = createNativeStackNavigator();
@@ -51,9 +54,12 @@ export default function App() {
         <Stack.Screen name="RecordPage" component={RecordPage} />
         <Stack.Screen name="SearchFriends" component={SearchFriends} />
         <Stack.Screen name="SearchScreen" component={SearchScreen} />
-        <Stack.Screen name="SettingsForRecord" component={SettingsForRecord} />
+        <Stack.Screen name="SettingsForRecord" component={SettingsForRecord} 
+          options={{headerShown: false}}
+        />
         <Stack.Screen name="Share" component={Share} />
         <Stack.Screen name="Stars" component={Stars} />
+        <Stack.Screen name="CheckingCameraScreen" component={CheckingCameraScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
