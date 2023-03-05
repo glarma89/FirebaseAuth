@@ -51,7 +51,9 @@ export default function App() {
         <Stack.Screen name="JoinedAChallenge" component={JoinedAChallenge} />
         <Stack.Screen name="Logo" component={Logo} />
         <Stack.Screen name="Notifications" component={Notifications} />
-        <Stack.Screen name="RecordPage" component={RecordPage} />
+        <Stack.Screen name="RecordPage" component={RecordPage} 
+          options={{headerShown: false}}
+        />
         <Stack.Screen name="SearchFriends" component={SearchFriends} />
         <Stack.Screen name="SearchScreen" component={SearchScreen} />
         <Stack.Screen name="SettingsForRecord" component={SettingsForRecord} 
