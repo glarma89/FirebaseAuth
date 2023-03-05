@@ -13,13 +13,12 @@ const styles = StyleSheet.create({
         //fontFamily: 'Trebuchet MS',
         fontWeight: 'bold'
     },
-    // logo: {
-    //     position: 'relative',
-    //     width: '100px',
-    //     height: '100px',
-    //     backgroundColor: 'violet',
-    //     borderRadius: '28%'
-    // },
+    record: {
+        width: '50px',
+        height: '50px',
+        backgroundColor: 'red',
+        borderRadius: '50%',
+    }
     
 });
 

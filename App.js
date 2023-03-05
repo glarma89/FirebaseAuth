@@ -59,7 +59,7 @@ export default function App() {
         />
         <Stack.Screen name="Share" component={Share} />
         <Stack.Screen name="Stars" component={Stars} />
-        <Stack.Screen name="CheckingCameraScreen" component={CheckingCameraScreen} />
+        {/* <Stack.Screen name="CheckingCameraScreen" component={CheckingCameraScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
