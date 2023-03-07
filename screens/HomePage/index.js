@@ -48,6 +48,22 @@ const HomePage = ({ navigation }) => {
             <Tab.Navigator
                 barStyle={{ backgroundColor: 'white' }} //'black' bar
                 initialRouteName="/"
+                screenOptions={{
+                    title: '',
+                    tabBarStyle: {
+                        width: '300px',  //500px
+                    }
+                }}
+                // tabBarOptions={{
+                //     tabBarStyle: {
+                //         // width: '500px',
+                //         // position: '',
+                //         // color: 'red'
+                //         // display: 'flex',
+                //         // gap: '200px'
+                        
+                //     },
+                //   }}
             >
                 <Tab.Screen
                     name='Home' // Home
@@ -56,6 +72,7 @@ const HomePage = ({ navigation }) => {
                         tabBarIcon: ({ color }) => (
                             <Feather name='home' size={24} color={color}/>
                         ),
+                        ///tabBarLabel: null,
                         headerShown: false
                     }}
                 />
@@ -74,7 +91,7 @@ const HomePage = ({ navigation }) => {
                     component={EmptyScreen} // CameraScreen
                     options={{
                         tabBarIcon: ({ color }) => (
-                            <Feather name='plus-circle' size={24} color={color}/>
+                            <Feather name='plus-circle' size={50} color={color}/>
                         ),
                         headerShown: true
                     }}
@@ -100,7 +117,7 @@ const HomePage = ({ navigation }) => {
                     }}
                 />
             </Tab.Navigator>
-    
+            
             <Button
                 title="Go back"
                 onPress={() => navigation.goBack()}

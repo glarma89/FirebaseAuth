@@ -54,7 +54,9 @@ const styles = StyleSheet.create({
     },
     myNavigator: {
         width: '100%',
-        position: 'absolute'
+        position: 'absolute',
+        display: 'flex',
+        gap: 200
     },
     options: {
         position: 'absolute',
@@ -67,6 +69,9 @@ const styles = StyleSheet.create({
     },
     iconsText: {
         color: 'blue',
+    },
+    navigator: {
+
     }
 });
 
