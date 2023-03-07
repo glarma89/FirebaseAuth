@@ -49,7 +49,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 0,
         right: 0,
-        zIndex: 1
+        zIndex: 1,
+        resizeMode: 'stretch' 
     },
     myNavigator: {
         width: '100%',

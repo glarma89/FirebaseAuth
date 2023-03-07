@@ -20,18 +20,17 @@ const RecordPage = ({ navigation }) => {
     return ( 
         <View style={styles.container}>
             <View style={styles.fighting}>
-                <Image 
-                    style={{ width: 400, height: 492 }} // 300 300 // 429 492
-                    //style={styles.fightingImage}
-                    source={require('../../pictures/Picture7.jpg')} // fighting
-                />
-                <View style={styles.fightingMask}>
                     <Image 
-                        style={{ width: 400, height: 492 }} // 300 300
+                        style={{ width: 400, height: 492, resizeMode: 'stretch' }} // 300 300 // 429 492
+                        //style={styles.fightingImage}
+                        source={require('../../pictures/Picture7.jpg')} // fighting
+                    />
+                    <Image 
+                        style={styles.fightingMask}
+                        //style={{ width: 400, height: 492, resizeMode: 'stretch' }} // 300 300
                         source={require('../../pictures/Picture6.png')} // fighting mask 497 827
                     />
-                </View>
-                <View style={styles.options}>
+                    <View style={styles.options}>
                     <View>
                         <MaterialCommunityIcons name="unicorn" size={50} color="blue" />
                         <Text style={styles.iconsText}>Filters</Text>                    
