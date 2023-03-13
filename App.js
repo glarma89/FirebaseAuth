@@ -1,69 +1,27 @@
-import React from 'react';
-import { StatusBar } from 'expo-status-bar';
+import React, { useState } from 'react';
+//import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import ImageGrid from './src/comps/ImageGrid';
+import VideoGrid from './src/comps/VideoGrid';
+import Modal from './src/comps/Modal';
+import VideoModal from './src/comps/VideoModal';
+import Title from './src/comps/Title';
+import UploadForm from './src/comps/UploadForm';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// import LoginScreen from './screens/LoginScreen';
-// import HomeScreen from './screens/HomeScreen';
-import EntryPage from './screens/EntryPage';
-import HomePage from './screens/HomePage';
-// import HomeScreen from './screens/HomeScreen';
-// import DetailsScreen from './screens/DetailsScreen';
-import AcceptChall from './screens/AcceptChall';
-import CancelTheChall from './screens/CancelTheChall';
-import Congrats from './screens/Congrats';
-import CreateAccount from './screens/CreateAccount';
-import JoinedAChallenge from './screens/JoinedAChallenge';
-import Logo from './screens/Logo';
-import Notifications from './screens/Notifications';
-import RecordPage from './screens/RecordPage';
-import SearchFriends from './screens/SearchFriends';
-import SearchScreen from './screens/SearchScreen';
-import SettingsForRecord from './screens/SettingsForRecord';
-import Share from './screens/Share';
-import Stars from './screens/Stars';
-import CheckingCameraScreen from './screens/CheckingCameraScreen/indexempty';
-//import CheckingCameraScreen from './screens/CheckingCameraScreen/index2';
-
-//import HomeScreen from './screens/HomeScreen';
-
-const Stack = createNativeStackNavigator();
 
 export default function App() {
+  const [selectedImg, setSelectedImg] = useState(null);
+  const [selectedVideo, setSelectedVideo] = useState(null); 
+
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Entry Page">
-        {/* <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} /> */}
-        {/* <Stack.Screen options={{ headerShown: false }} name="Login" component={LoginScreen} />
-        <Stack.Screen name="Home" component={HomeScreen} /> */}
-        <Stack.Screen name="Entry Page" component={EntryPage} 
-          //options={{headerShown: false}}
-        />
-        <Stack.Screen name="Home Page" component={HomePage} 
-          options={{headerShown: false}}
-        />
-        <Stack.Screen name="AcceptChall" component={AcceptChall} />
-        <Stack.Screen name="CancelTheChall" component={CancelTheChall} />
-        <Stack.Screen name="Congrats" component={Congrats} />
-        <Stack.Screen name="CreateAccount" component={CreateAccount} />
-        <Stack.Screen name="JoinedAChallenge" component={JoinedAChallenge} />
-        <Stack.Screen name="Logo" component={Logo} />
-        <Stack.Screen name="Notifications" component={Notifications} />
-        <Stack.Screen name="RecordPage" component={RecordPage} 
-          options={{headerShown: false}}
-        />
-        <Stack.Screen name="SearchFriends" component={SearchFriends} />
-        <Stack.Screen name="SearchScreen" component={SearchScreen} />
-        <Stack.Screen name="SettingsForRecord" component={SettingsForRecord} 
-          options={{headerShown: false}}
-        />
-        <Stack.Screen name="Share" component={Share} />
-        <Stack.Screen name="Stars" component={Stars} />
-        {/* <Stack.Screen name="CheckingCameraScreen" component={CheckingCameraScreen} /> */}
-      </Stack.Navigator>
-    </NavigationContainer>
+    <View style={styles}>
+      <Title />
+      <UploadForm />
+      <ImageGrid setSelectedImg={setSelectedImg}/>
+      <VideoGrid setSelectedVideo={setSelectedVideo} />
+      { selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg}/> }
+      { selectedVideo && <VideoModal selectedVideo={selectedVideo} setSelectedVideo={setSelectedVideo}/> }
+    </View>
   );
 }
 
